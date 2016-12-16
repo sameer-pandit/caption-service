@@ -14,7 +14,7 @@ exports.getCaptionFromStream = stream => {
             const requestData = {
                 url: VISION_URL,
                 encoding: 'binary',
-                headers: { "Ocp-Apim-Subscription-Key":"fbf137b1fd234e829c348fb8ffbb2a09",'content-type': 'application/octet-stream' }
+                headers: { "Ocp-Apim-Subscription-Key":"API-KEY",'content-type': 'application/octet-stream' }
             };
 
             stream.pipe(request.post(requestData, (error, response, body) => {
@@ -62,7 +62,7 @@ exports.getCaptionFromUrl = url => {
             const requestData = {
                 uri: VISION_URL,
                 method: "POST",
-                headers: {"Ocp-Apim-Subscription-Key":"fbf137b1fd234e829c348fb8ffbb2a09"},
+                headers: {"Ocp-Apim-Subscription-Key":"API-KEY"},
                 json: { "url": url }
             };
 
